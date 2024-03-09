@@ -1,4 +1,4 @@
-package com.bhusal.entiry;
+package com.bhusal.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -21,17 +21,35 @@ public class User {
 	//@Column(name = "address")
 	private String address;
 	private String email;
-	public User() {
-		super();
-		// TODO Auto-generated constructor stub
+	@Column(name="username")
+	private String uName;
+	private String password;
+	public String getuName() {
+		return uName;
 	}
-	public User(String firstName, String lastName, String address, String email) {
+	public void setuName(String uName) {
+		this.uName = uName;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public User(String firstName, String lastName, String address, String email, String uName, String password) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.address = address;
 		this.email = email;
+		this.uName = uName;
+		this.password = password;
 	}
+	public User() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
 	public int getId() {
 		return id;
 	}

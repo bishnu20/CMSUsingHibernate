@@ -2,7 +2,7 @@ package com.bhusal.DAO;
 
 import java.util.List;
 
-import com.bhusal.entiry.User;
+import com.bhusal.entity.User;
 
 public interface UserDAO {
 	public void register();
@@ -10,5 +10,6 @@ public interface UserDAO {
 	public boolean verifyCredentials(String uname,String password);
 	public User findUser(int id);
 	public List<User> users();
+	public void resetPassword(String uname, String email);
 
 }
